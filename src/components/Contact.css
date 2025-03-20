@@ -1,0 +1,18 @@
+.contact {
+    padding: 50px;
+    text-align: center;
+    background: #333;
+    color: white;
+    height: 60vh;
+  }
+  
+  .contact a {
+    color: #1dbf73;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact a:hover {
+    text-decoration: underline;
+  }
+  
