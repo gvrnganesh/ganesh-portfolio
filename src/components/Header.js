@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="header">
       <h1>
-        <a href="#hero" className="portfolio-name">GANESH's PORTFOLIO</a>
+        <a href="#hero" className="portfolio-name">Ganesh's Portfolio</a>
       </h1>
 
       {/* Hamburger Icon */}
