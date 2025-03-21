@@ -3,21 +3,70 @@ import "./Projects.css"; // Add styles if needed
 
 const projects = [
   {
-    id: "f680c5fb-a4d0-4f43-b356-785d920208df",
+    id: 0,
     name: "Music Page",
     image: "/projects/music-page-img.png",
   },
   {
-    id: "86f8d60b-661b-4883-b35f-3755d96da219",
+    id: 1,
     name: "Tourism Website",
     image: "/projects/tourism-website-img.png",
   },
   {
-    id: "9ed10776-db55-42ea-8bb4-634eee354b71",
+    id: 2,
     name: "Advanced Technologies",
     image: "/projects/advanced-technologies-img.png",
   },
-  // Add remaining projects here...
+  {
+    id: 3,
+    name: "Robotics",
+    image: "/projects/robotics-img.png",
+  },
+  {
+    id: 4,
+    name: "Food Munch",
+    image: "/projects/food-munch-img.png",
+  },
+  {
+    id: 5,
+    name: "Happy Meals",
+    image: "/projects/happy-meal-img.png",
+  },
+  {
+    id: 6,
+    name: "Mobile Store",
+    image: "/projects/mobile-store-img.png",
+  },
+  {
+    id: 7,
+    name: "VR Website",
+    image: "/projects/vr-website-img.png",
+  },
+  {
+    id: 8,
+    name: "Dream Car",
+    image: "/projects/dream-car-img.png",
+  },
+  {
+    id: 9,
+    name: "Gallery App",
+    image: "/projects/gallery-app-img.png",
+  },
+  {
+    id: 10,
+    name: "Chat Screen",
+    image: "/projects/chat-screen-img.png",
+  },
+  {
+    id: 11,
+    name: "Blogs List",
+    image: "/projects/blogs-list-img.png",
+  },
+  {
+    id: 12,
+    name: "Chat Bot",
+    image: "/projects/chat-bot-img.png",
+  },
 ];
 
 const Projects = () => {
@@ -26,8 +75,8 @@ const Projects = () => {
     <div className="projects-container">
       <h2 className="section-title">Projects</h2>
       <div className="projects-grid">
-        {projects.map((project) => (
-          <div key={project.id} className="project-card">
+        {projects.map((project, index) => (
+          <div key={index} className="project-card">
             <img src={project.image} alt={project.name} className="project-img" />
             <h3 className="project-name">{project.name}</h3>
           </div>

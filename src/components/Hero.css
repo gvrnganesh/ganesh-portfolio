@@ -2,16 +2,16 @@
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   height: 100vh;
   color: white;
-  gap: 40px;
-  text-align: left;
+  text-align: center;
   background: linear-gradient(45deg, #dbeafe, #93c5fd, #4b86ce, #4689f5, #263f92, #dbeafe);
   background-size: 300% 300%;
   animation: gradientBG 10s ease-in-out infinite;
-  padding: 0 10%;
-  font-size: x-large;
+  padding: 5%;
+  font-size: large;
 }
 
 @keyframes gradientBG {
@@ -22,39 +22,39 @@
 
 /* Left Section - Profile Picture */
 .hero-left {
-  flex: 1; /* Takes 50% width */
+  flex: 1;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .profile-pic {
   width: 180px;
-  height: 190px;
+  height: 180px;
   border-radius: 50%;
   border: 3px solid white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   object-fit: cover;
   padding: 8px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  margin-top: 30px;
 }
 
-/* 👇 Pop-out effect on hover */
+/* Hover effect */
 .profile-pic:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
   box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
 }
 
 /* Right Section - Text */
 .hero-right {
   flex: 1;
-  text-align: left;
-  padding-left: 40px;
+  max-width: 500px;
+  text-align: center;
 }
 
-/* Floating Hand Wave Animation */
+/* Hand Wave Animation */
 .wave {
-  font-size: 4rem;
+  font-size: 3rem;
   display: inline-block;
   animation: waveAnim 1.5s infinite;
 }
@@ -92,8 +92,6 @@
   background: rgba(255, 255, 255, 0.7);
 }
 
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
@@ -106,7 +104,16 @@
   }
 
   .hero-right {
-    text-align: center;
-    padding-left: 0;
+    width: 100%;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 10px 20px;
   }
 }

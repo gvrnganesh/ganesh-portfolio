@@ -1,53 +1,132 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 5px 0px 5px;
-    background: #333;
-    color: white;
-    position: fixed;
-    width: 100%;
-  }
-  
-  .header h1 {
-    font-size: 1.5rem;
-  }
-  
-  .header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-  }
-  
-  .header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .header nav ul li a:hover {
-    text-decoration: underline;
-  }
-  .portfolio-name{
-    font-family: 'lucida handwriting', Sans-Serif;
-    font-weight: 500;
-    text-decoration: none;
-    color: white;
-  }
-  
-  .portfolio-name:visited {
-    color: white;
-  }
-  
-  .portfolio-name:active {
-    color: blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 2%;
+  background: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+.portfolio-name {
+  font-family: 'Lucida Handwriting', Sans-Serif;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+.portfolio-name:visited {
+  color: white;
+}
+
+.portfolio-name:active {
+  color: blue;
+}
+
+.header h1:hover {
+  font-weight: 700;
+  color: grey;
+}
+
+/* Navigation */
+.nav-items {
+  padding-right: 30px;
+}
+
+/* Default: Hide Menu */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #333;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding-right: 25px;
+  margin: 0;
+}
+
+.nav-menu ul li {
+  padding: 10px 0;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+
+.nav-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+}
+
+/* Responsive Breakpoints */
+
+/* Show hamburger for small to large devices */
+@media (max-width: 1024px) {
+  .hamburger {
+      display: flex;
   }
 
-  .header h1:hover {
-    font-weight: 700;
-    color: grey;
+  .nav-menu {
+      display: none;
   }
 
-  .nav-items{
-    padding-right: 30px;
+  .nav-menu.active {
+      display: flex;
   }
+}
+
+/* Expanded menu for extra-large screens */
+@media (min-width: 1025px) {
+  .hamburger {
+      display: none;
+  }
+
+  .nav-menu {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      width: auto;
+      background: none;
+  }
+
+  .nav-menu ul {
+      display: flex;
+      gap: 20px;
+  }
+
+  .nav-menu ul li {
+      padding: 0;
+  }
+
+  .nav-menu ul li a {
+      padding: 10px 15px;
+  }
+}
