@@ -99,7 +99,7 @@
     flex-direction: column;
     text-align: center;
     padding-top: 90px; 
-    gap: 10px; 
+    gap: 5px; 
     height: auto; 
     min-height: 90vh; 
   }
