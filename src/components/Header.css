@@ -100,7 +100,7 @@
       display: none;
   }
 
-  .nav-menu.active {
+  .nav-menu.open {
       display: flex;
   }
 

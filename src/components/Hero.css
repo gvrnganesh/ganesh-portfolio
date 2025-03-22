@@ -97,6 +97,7 @@
   .hero {
     flex-direction: column;
     text-align: center;
+    padding-top: 80px;
   }
 
   .hero-left {
@@ -110,7 +111,7 @@
   .profile-pic {
     width: 150px;
     height: 150px;
-    margin-top: 30px;
+    margin-top: 110px;
   }
 
   .cta-button {
